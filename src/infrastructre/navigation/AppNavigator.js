@@ -8,7 +8,7 @@ const stack = createNativeStackNavigator();
 export const AppNavigator = () => {
   return (
     <stack.Navigator headerMode="false">
-      <stack.Screen name="Main" component={IndexScreen} />
+      <stack.Screen name="Blog" component={IndexScreen} />
     </stack.Navigator>
   );
-};
+}
