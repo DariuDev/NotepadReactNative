@@ -1,6 +1,5 @@
 import React from 'react';
-import {Navigation} from './src/infrastructre/navigation/Index';
-import 'react-native-gesture-handler';
+import {Navigation} from './src/infrastructre/navigation/index';
 
 export default function App() {
   return (
