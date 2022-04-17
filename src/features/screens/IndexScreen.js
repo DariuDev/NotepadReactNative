@@ -4,7 +4,7 @@ import {BlogContext} from '../../services/blog-context.js/BlogContext';
 
 export const IndexScreen = () => {
     const {BlogPost, addBlogPost} = useContext(BlogContext);
-    return (
+   return (
         <View>
             <Button title={'ADD'} onPress={addBlogPost}/>
         <Text>index screen</Text>
