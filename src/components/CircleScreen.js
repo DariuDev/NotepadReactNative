@@ -1,14 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-export const Circle = () => {
+export const Circle = ({navigation}) => {
   return (
     <Icon
       name="pluscircleo"
-      color={'black'}
+      color='black'
       size={60}
-      onPress={() => console.log('pressed')}
     />
   );
 };

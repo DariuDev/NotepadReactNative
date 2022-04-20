@@ -34,9 +34,12 @@ export const IndexScreen = ({navigation}) => {
             </TouchableOpacity>
           </TouchableOpacity>
         )}
-      /><View style={styles.circle}>
-      <Circle />
-      </View>
+      />
+      <TouchableOpacity
+        style={styles.circle}
+        onPress={() => navigation.navigate('CreateNote')}>
+        <Circle />
+      </TouchableOpacity>
     </View>
   );
 };
