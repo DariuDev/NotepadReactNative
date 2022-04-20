@@ -8,13 +8,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Context} from '../../services/context/blogContext/BlogContext';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Circle} from '../../components/CircleScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export const IndexScreen = ({navigation}) => {
   const {state, addBlogPost, deleteBlogPost} = useContext(Context);
 
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Button title={'ADD'} onPress={addBlogPost} />
       <FlatList
         data={state}
@@ -29,11 +30,13 @@ export const IndexScreen = ({navigation}) => {
               {item.title}-{item.id}
             </Text>
             <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
-              <Ionicons name={'md-restaurant'} size={20}></Ionicons>
+              <Icon name={'trash-outline'} size={25} />
             </TouchableOpacity>
           </TouchableOpacity>
         )}
-      />
+      /><View style={styles.circle}>
+      <Circle />
+      </View>
     </View>
   );
 };
@@ -44,5 +47,10 @@ const styles = StyleSheet.create({
     borderTopColor: 'black',
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  circle: {
+    position: 'absolute',
+    right: 20,
+    bottom: 20,
   },
 });
