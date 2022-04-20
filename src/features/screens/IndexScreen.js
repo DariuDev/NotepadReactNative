@@ -4,7 +4,7 @@ import {Context} from '../../services/context/blogContext/BlogContext';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export const IndexScreen = () => {
-  const {state, addBlogPost} = useContext(Context);
+  const {state, addBlogPost, deleteBlogPost} = useContext(Context);
 
   return (
     <View>
@@ -16,8 +16,8 @@ export const IndexScreen = () => {
         }}
         renderItem={({item}) =>(
            <View style={styles.items}>
-          <Text>{item.title}</Text>
-          <TouchableOpacity>
+          <Text>{item.title}-{item.id}</Text>
+          <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
           <Ionicons name={"md-restaurant"} size={20}></Ionicons>
           </TouchableOpacity>
           </View> 
