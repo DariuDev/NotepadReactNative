@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-export const Circle = ({navigation}) => {
+export const Circle = () => {
   return (
     <Icon
       name="pluscircleo"
