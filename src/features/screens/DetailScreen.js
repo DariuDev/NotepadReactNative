@@ -9,5 +9,5 @@ export const DetailScreen = ({route}) => {
   const blogPost = state.find(
     blogPost => blogPost.id === route.params.id
   );
-  return <View><Text>{blogPost.title}</Text></View>;
+  return <View><Text>{blogPost.title}-{blogPost.content}</Text></View>;
 };
