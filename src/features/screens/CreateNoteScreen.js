@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {View} from 'react-native';
 import {TextInput, Button} from 'react-native-paper';
+import { Context } from '../../services/context/blogContext/BlogContext';
 
 export const CreateNoteScreen = () => {
   const [title, setTitle] = useState();
   const [content, setContent] = useState();
+  const {addBlogPost} = useContext(Context);
+
   return (
     <View>
       <TextInput
@@ -27,7 +30,9 @@ export const CreateNoteScreen = () => {
       />
       <Button
         style={{marginLeft: 40, marginRight: 40, marginTop: 10}}
-        mode="outlined">
+        mode="outlined"
+        onPress={() => addBlogPost(title, content)}
+        >
         Add Note
       </Button>
     </View>
