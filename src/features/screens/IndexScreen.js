@@ -8,8 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Context} from '../../services/context/blogContext/BlogContext';
-import {Circle} from '../../components/CircleScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
+import IconAdd from 'react-native-vector-icons/AntDesign';
 
 export const IndexScreen = ({navigation}) => {
   const {state, addBlogPost, deleteBlogPost} = useContext(Context);
@@ -37,7 +37,7 @@ export const IndexScreen = ({navigation}) => {
       <TouchableOpacity
         style={styles.circle}
         onPress={() => navigation.navigate('CreateNote')}>
-        <Circle />
+        <IconAdd name="pluscircleo" color="purple" size={60} />
       </TouchableOpacity>
     </View>
   );
