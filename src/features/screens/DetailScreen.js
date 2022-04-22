@@ -15,7 +15,7 @@ export const DetailScreen = ({navigation, route}) => {
       </Text>
       <TouchableOpacity
         style={styles.circle}
-        onPress={() => navigation.navigate('EditNote')}>
+        onPress={() => navigation.navigate('EditNote', {id: route.params.id})}>
         <IconEdit name="edit" color="purple" size={50} />
       </TouchableOpacity>
     </View>
